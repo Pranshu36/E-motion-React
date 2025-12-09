@@ -1,10 +1,10 @@
 import { createContext, useContext, useState, type ReactNode } from 'react';
 
-type AuthContextValue = {
+interface AuthContextValue {
   isAuthenticated: boolean;
   login: () => void;
   logout: () => void;
-};
+}
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 
