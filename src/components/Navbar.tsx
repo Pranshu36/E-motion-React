@@ -23,9 +23,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`flex justify-between shadow-3xl ${
-        isDark ? 'bg-[#222222]' : 'bg-[#FAF9F6]'
-      } items-center h-[15vh] px-10 font-montserrat`}
+      className={`flex justify-between shadow-md sticky top-0 z-20 backdrop-blur-3xl items-center h-20 px-8 font-montserrat`}
     >
       <div
         onClick={() => {
@@ -48,7 +46,9 @@ export default function Navbar() {
                   key={`${navlink.label}${index}`}
                   className='font-semibold font-montserrat hover:text-[#01796f] cursor-pointer'
                 >
-                  <button className='cursor-pointer'>{navlink.label}</button>
+                  <Link to={navlink.path} className='cursor-pointer'>
+                    {navlink.label}
+                  </Link>
                 </li>
               );
             })}
