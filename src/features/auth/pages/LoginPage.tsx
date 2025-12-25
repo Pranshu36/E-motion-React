@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 import InputField from '../../../components/formFields/InputField';
 import { useTheme } from '../../../context/ThemeProvider';
+import { ROUTE } from '../../../routes/route';
 import { loginSchema, type LoginDataType } from '../schemas/login.schema';
 
 export default function LoginPage() {
@@ -74,7 +75,7 @@ export default function LoginPage() {
               Forgot Password?
             </Link>
             <Link
-              to='/signup'
+              to={ROUTE.AUTH.SIGNUP}
               className='font-montserrat text-sm md:text-base font-medium text-gray-600  hover:text-[#01796f] hover:scale-105 transition-transform'
             >
               Not a User? Register
