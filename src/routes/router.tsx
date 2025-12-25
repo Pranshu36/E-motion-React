@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import ErrorBoundary from '../components/ErrorBoundary';
 import NotFound from '../components/NotFound';
 import LoginPage from '../features/auth/pages/LoginPage';
+import ContactPage from '../features/contactPage/pages/ContactPage';
 import HomePage from '../features/homepage/pages/HomePage';
 import MainLayout from '../layouts/MainLayout';
 
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
             <HomePage />
           </ProtectedRoute>
         ),
+      },
+      {
+        path: ROUTE.CONTACT,
+        element: <ContactPage />,
       },
     ],
   },
