@@ -8,7 +8,7 @@ export default function MainLayout() {
   const { isDark } = useTheme();
   return (
     <div
-      className={`${isDark ? 'bg-[#222222]' : 'bg-["#FAF9F6"]'} min-h-screen h-full min-w-[320px]`}
+      className={`${isDark ? 'bg-[#222222]' : 'bg-[#FAF9F6]'} min-h-screen h-full min-w-[320px]`}
     >
       <Navbar />
       <Outlet />

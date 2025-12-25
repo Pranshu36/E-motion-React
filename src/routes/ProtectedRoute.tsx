@@ -21,7 +21,7 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 
   if (isAuthenticated) return children;
 
-  return <Navigate to={ROUTE.LOGIN} state={{ from: location }} replace />;
+  return <Navigate to={ROUTE.AUTH.LOGIN} state={{ from: location }} replace />;
 };
 
 export default ProtectedRoute;
