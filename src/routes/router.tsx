@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 
 import ErrorBoundary from '../components/ErrorBoundary';
 import NotFound from '../components/NotFound';
+import AuthLayout from '../features/auth/layouts/AuthLayout';
 import LoginPage from '../features/auth/pages/LoginPage';
 import ContactPage from '../features/contactPage/pages/ContactPage';
 import HomePage from '../features/homepage/pages/HomePage';
@@ -31,11 +32,17 @@ export const router = createBrowserRouter([
         path: ROUTE.CONTACT,
         element: <ContactPage />,
       },
+      {
+        path: ROUTE.AUTH.INDEX,
+        element: <AuthLayout />,
+        children: [
+          {
+            path: ROUTE.AUTH.LOGIN,
+            element: <LoginPage />,
+          },
+        ],
+      },
     ],
-  },
-  {
-    path: ROUTE.LOGIN,
-    element: <LoginPage />,
   },
   {
     path: '*',

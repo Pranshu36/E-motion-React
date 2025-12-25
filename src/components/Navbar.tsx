@@ -9,6 +9,7 @@ import { THEME_MODE } from '../constants/app.constant';
 import { NAVLINKS } from '../constants/navlink';
 import { useTheme } from '../context/ThemeProvider';
 import { useAuth } from '../features/auth/context/AuthProvider';
+import { ROUTE } from '../routes/route';
 
 export default function Navbar() {
   const [dropdownlogo, setDropdownlogo] = useState(false);
@@ -150,7 +151,7 @@ export default function Navbar() {
           </div>
         ) : (
           <Link
-            to='/login'
+            to={ROUTE.AUTH.LOGIN}
             className={`${
               isDark ? 'text-white' : 'text-black'
             } font-medium  border-solid ${

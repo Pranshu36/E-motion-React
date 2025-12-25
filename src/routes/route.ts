@@ -1,6 +1,9 @@
 export const ROUTE = {
   HOME: '/',
-  AUTH: '/auth',
-  LOGIN: '/login',
   CONTACT: '/contact',
+  AUTH: {
+    INDEX: '/auth',
+    LOGIN: '/auth/login',
+    SIGNUP: '/auth/signup',
+  },
 };
