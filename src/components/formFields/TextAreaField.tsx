@@ -1,0 +1,39 @@
+import type { ComponentProps } from 'react';
+
+import { useTheme } from '../../context/ThemeProvider';
+
+interface TextAreaFieldProps extends ComponentProps<'textarea'> {
+  label?: string;
+  required?: boolean;
+  error?: string;
+}
+
+export default function TextAreaField({
+  label,
+  required,
+  error,
+  ...props
+}: TextAreaFieldProps) {
+  const { isDark } = useTheme();
+
+  return (
+    <div className='w-full flex flex-col gap-2'>
+      {label && (
+        <p
+          className={`${
+            isDark ? 'text-white' : 'text-black'
+          } font-semibold font-montserrat`}
+        >
+          {label} {required && <span className='text-red-500'>*</span>}
+        </p>
+      )}
+      <textarea
+        className={`h-[30vh] align-top bg-transparent border-2 w-full rounded-lg p-4 font-montserrat font-medium ${
+          isDark ? 'text-white' : 'text-black'
+        }`}
+        {...props}
+      />
+      {error && <p className='text-red-500'>{error}</p>}
+    </div>
+  );
+}
