@@ -8,7 +8,7 @@ import SignupPage from '../features/auth/pages/SignupPage';
 import BlogPage from '../features/blog/pages/BlogPage';
 import ContactPage from '../features/contactPage/pages/ContactPage';
 import HomePage from '../features/homepage/pages/HomePage';
-import SchedulePickup from '../features/schedulePickup/pages/SchedulePickup';
+// import SchedulePickup from '../features/schedulePickup/pages/SchedulePickup';
 import MainLayout from '../layouts/MainLayout';
 
 import ProtectedRoute from './ProtectedRoute';
@@ -39,10 +39,10 @@ export const router = createBrowserRouter([
         path: ROUTE.BLOG,
         element: <BlogPage />,
       },
-      {
-        path: ROUTE.pickup,
-        element: <SchedulePickup />,
-      },
+      // {
+      //   path: ROUTE.pickup,
+      //   element: <SchedulePickup />,
+      // },
       {
         path: ROUTE.AUTH.INDEX,
         element: <AuthLayout />,
