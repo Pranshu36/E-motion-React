@@ -50,7 +50,7 @@ export default function LoginPage() {
             name='email'
             className={`bg-transparent w-full font-medium placeholder:font-medium ${
               isDark ? 'text-white' : 'text-black'
-            } outline-none border-b-2 py-4 font-montserrat`}
+            } outline-none text-lg placeholder:text-lg border-t-0 border-x-0 px-0 border-b-2 py-6 font-montserrat rounded-none focus-visible:ring-0`}
             type='email'
             placeholder='Email'
             error={errors.email?.message}
@@ -62,7 +62,7 @@ export default function LoginPage() {
             name='password'
             className={`bg-transparent w-full font-medium placeholder:font-medium ${
               isDark ? 'text-white' : 'text-black'
-            } outline-none border-b-2 py-4 font-montserrat`}
+            } outline-none text-lg placeholder:text-lg border-t-0 border-x-0 px-0 border-b-2 py-6 font-montserrat rounded-none focus-visible:ring-0`}
             type='password'
             placeholder='Password'
             error={errors.password?.message}
