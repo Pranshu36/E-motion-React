@@ -56,7 +56,7 @@ export default function SignupPage() {
             name='name'
             className={`bg-transparent w-full font-medium placeholder:font-medium ${
               isDark ? 'text-white' : 'text-black'
-            } outline-none border-b-2 py-4 font-montserrat`}
+            } outline-none text-lg placeholder:text-lg border-t-0 border-x-0 px-0 border-b-2 py-6 font-montserrat rounded-none focus-visible:ring-0`}
             error={errors.name?.message}
           />
           <InputField
@@ -68,7 +68,7 @@ export default function SignupPage() {
             name='email'
             className={`bg-transparent w-full font-medium placeholder:font-medium ${
               isDark ? 'text-white' : 'text-black'
-            } outline-none border-b-2 py-4 font-montserrat`}
+            } outline-none text-lg placeholder:text-lg border-t-0 border-x-0 px-0 border-b-2 py-6 font-montserrat rounded-none focus-visible:ring-0`}
             error={errors.email?.message}
           />
           <InputField
@@ -80,7 +80,7 @@ export default function SignupPage() {
             name='password'
             className={`bg-transparent w-full font-medium placeholder:font-medium ${
               isDark ? 'text-white' : 'text-black'
-            } outline-none border-b-2 py-4 font-montserrat`}
+            } outline-none text-lg placeholder:text-lg border-t-0 border-x-0 px-0 border-b-2 py-6 font-montserrat rounded-none focus-visible:ring-0`}
             error={errors.password?.message}
           />
           <InputField
@@ -92,7 +92,7 @@ export default function SignupPage() {
             name='confirmPassword'
             className={`bg-transparent w-full font-medium placeholder:font-medium ${
               isDark ? 'text-white' : 'text-black'
-            } outline-none border-b-2 py-4 font-montserrat`}
+            } outline-none text-lg placeholder:text-lg border-t-0 border-x-0 px-0 border-b-2 py-6 font-montserrat rounded-none focus-visible:ring-0`}
             error={errors.confirmPassword?.message}
           />
           <div className='flex gap-5'>

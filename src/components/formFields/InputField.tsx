@@ -1,6 +1,7 @@
 import type { ComponentProps } from 'react';
 
 import { useTheme } from '../../context/ThemeProvider';
+import { Input } from '../ui/input';
 
 interface InputFieldProps extends ComponentProps<'input'> {
   label?: string;
@@ -27,8 +28,8 @@ export default function InputField({
           {label} {required && <span className='text-red-500'>*</span>}
         </p>
       )}
-      <input
-        className={`bg-transparent border-2 w-full rounded-lg p-4 font-montserrat font-medium ${
+      <Input
+        className={`bg-transparent border-2 w-full rounded-lg px-4 py-6 font-montserrat font-medium ${
           isDark ? 'text-white' : 'text-black'
         }`}
         {...props}

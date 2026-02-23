@@ -1,6 +1,7 @@
 import type { ComponentProps } from 'react';
 
 import { useTheme } from '../../context/ThemeProvider';
+import { Textarea } from '../ui/textarea';
 
 interface TextAreaFieldProps extends ComponentProps<'textarea'> {
   label?: string;
@@ -27,7 +28,7 @@ export default function TextAreaField({
           {label} {required && <span className='text-red-500'>*</span>}
         </p>
       )}
-      <textarea
+      <Textarea
         className={`h-[30vh] align-top bg-transparent border-2 w-full rounded-lg p-4 font-montserrat font-medium ${
           isDark ? 'text-white' : 'text-black'
         }`}

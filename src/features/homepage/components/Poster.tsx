@@ -4,6 +4,7 @@ import poster from '../../../assets/homePoster.gif';
 import posterlight from '../../../assets/homePosterlight.gif';
 import map from '../../../assets/map.gif';
 import { useTheme } from '../../../context/ThemeProvider';
+import { ROUTE } from '../../../routes/route';
 
 export default function Poster() {
   const { isDark } = useTheme();
@@ -41,7 +42,7 @@ export default function Poster() {
           </div>
           <div className='flex flex-row gap-5'>
             <Link
-              to='/explore'
+              to={ROUTE.pickup}
               className={`${
                 isDark ? 'text-white' : 'text-black'
               } font-montserrat font-semibold p-4 shadow-3xl rounded-lg hover:bg-[#01796f] hover:scale-105 transition-transform`}
